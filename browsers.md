@@ -12,7 +12,7 @@ It's ok because resources are hash-named, even in dev.
 Newer Chrome versions no longer support regex filter but to exclude a word, **prefix it with '-'**
 
 ```text
--HMR -react.js.org/link/react-devtools
+-HMR -link/react-devtools
 ```
 
 
@@ -29,7 +29,7 @@ Advanced -> A11y -> Press Tab to highlight
 ### Hosts file
 `sudoedit /etc/hosts` needs to exit `:wq` (`:w` alone doesn't work)
 
-###Chrome
+### Chrome
 chrome://net-internals/#dns
 
 ### Firefox
@@ -37,7 +37,7 @@ about:networking#dns
 
 
 ## Chrome
-####Redirect to https in dev
+#### Redirect to https in dev
 On the console just Right-Click → Clear Browser Cache (it won't
 delete the IndexedDB). In this case trying to delete the HSTS record in
 Chrome's internals (chrome://net -internals/#hsts) doesn't do anything.
