@@ -39,3 +39,10 @@ curl --data "{}" url
 curl -o /dev/null -sw 'TCP=%{time_connect} TLS=%{time_appconnect} ALL=%{time_total}\n' https://uidrafter.com
 ```
 
+
+## Download all the files from a list and exclude the query string when saving
+
+This is sequential
+```shell
+xargs -n 1 curl --remote-header-name -O < myfile-list
+```

@@ -37,6 +37,13 @@ git bisect bad   # or good
 git bisect reset 
 ```
 
+## Rename all ".js" -> ".mjs" (recursively)
+```shell
+for i in $(find . -iname "*.js"); do
+  git mv "$i" "$(echo $i | rev | cut -d '.' -f 2- | rev).mjs";
+done;
+```
+
 ## Clean
 Clean directories deleted in another clone. This happens when
 pulling, because that keeps any deleted directory (but empty).
@@ -78,3 +85,18 @@ git show <branch>:<file>
 git fsck --full --no-reflogs --unreachable --lost-found | grep commit | cut -d\  -f3 | xargs -n 1 git log -n 1 --pretty=oneline > .git/lost-found.txt
 ```
 https://stackoverflow.com/a/22303923
+
+
+## Patches
+Create a patch of the last commit
+```shell
+
+git format-patch -1
+```
+
+Apply a patch
+```shell
+git apply --stat my.patch
+git apply --check my.patch
+git apply my.patch
+```
