@@ -38,5 +38,4 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 
 ## Concepts
-- React devs badly named Controlled vs. Uncontrolled component.
-A better name would have just been saying "State Controlled Component".
+- Controlled vs. Uncontrolled component is a bad name. A better one would be "State Controlled Component".
