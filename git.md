@@ -1,5 +1,10 @@
 # git
 
+## Clone without history
+```shell
+git clone --depth 1 repo
+```
+
 ## Create Feature Branch
 ```shell
 git checkout main
