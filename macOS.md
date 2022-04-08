@@ -12,3 +12,7 @@ brew leaves
 - Drop localhost.cert into the app
 - Select the Localhost cert, expand Trust, select "Always Trust"
 - Restart the browser
+
+## SVG
+In Finder, the preview is cropped to the drawing size (as opposed to
+page) when it only has viewBox (it shouldn't have width and height)
