@@ -19,14 +19,14 @@ sends `XOFF` when it can't process more data, conversely sends `XON`.
 ### Option A (Pasting)
 ```shell
 pbcopy < myfile
-screen $DEV
+screen -f $DEV
 cmd+v
 ctrl+a ctrl+\ y (exit)
 ```
 
 ### Option B (Reading)
 ```shell
-screen $DEV 
+screen -f $DEV 
 ctrl+a : readbuf /Users/efortis/myfile
 ctrl+a : paste .
 ctrl+a ctrl+\ y (exit)
