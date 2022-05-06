@@ -16,3 +16,17 @@ brew leaves
 ## SVG
 In Finder, the preview is cropped to the drawing size (as opposed to
 page) when it only has viewBox (it shouldn't have width and height)
+
+
+## Cmd+Ctrl+Click Drag Window
+https://mmazzarolo.com/blog/2022-04-16-drag-window-by-clicking-anywhere-on-macos/
+
+Enable
+```shell
+defaults write -g NSWindowShouldDragOnGesture -bool true   
+```
+
+Disable
+```shell
+defaults delete -g NSWindowShouldDragOnGesture  
+```
