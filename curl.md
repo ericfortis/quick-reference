@@ -42,7 +42,22 @@ curl -o /dev/null -sw 'TCP=%{time_connect} TLS=%{time_appconnect} ALL=%{time_tot
 
 ## Download all the files from a list and exclude the query string when saving
 
-This is sequential
+### Option A
+This is sequential and requires the actual filename in the `Content-Disposition` header
 ```shell
 xargs -n 1 curl --remote-header-name -O < myfile-list
 ```
+
+### Option B
+```shell
+#!/bin/sh
+
+IFS=$'\n'
+FNAME=$1
+
+for url in `cat $FNAME`; do
+  out=`basename $url | sed s/?.*//`
+  curl $url -o $out
+done
+```
+
