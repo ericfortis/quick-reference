@@ -30,3 +30,9 @@ Disable
 ```shell
 defaults delete -g NSWindowShouldDragOnGesture  
 ```
+
+
+## Find user full name
+```shell
+id -F
+```
