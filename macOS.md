@@ -1,6 +1,11 @@
 # macOS
 
 
+## Typing
+- “ Alt + {
+- ” Alt + Shift + {
+- º Alt + 0
+
 ## Show the top level installed apps with homebrew
 ```shell
 brew leaves
@@ -30,7 +35,6 @@ Disable
 ```shell
 defaults delete -g NSWindowShouldDragOnGesture  
 ```
-
 
 ## Find user full name
 ```shell
