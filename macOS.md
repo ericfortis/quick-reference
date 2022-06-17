@@ -4,7 +4,16 @@
 ## Typing
 - “ Alt + {
 - ” Alt + Shift + {
+- ‘ Alt + ]
+- ’ Alt + Shift + ]
 - º Alt + 0
+
+## Turn Off Window Shadows on screenshots
+https://osxdaily.com/2011/05/23/disable-shadow-screen-shots-mac/
+```shell
+defaults write com.apple.screencapture disable-shadow -bool true
+killall SystemUIServer
+```
 
 ## Show the top level installed apps with homebrew
 ```shell
