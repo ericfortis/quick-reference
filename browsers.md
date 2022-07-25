@@ -15,6 +15,11 @@ Newer Chrome versions no longer support regex filter but to exclude a word, **pr
 -HMR -link/react-devtools
 ```
 
+## Uninstalling PWAs (and settings)
+```
+chrome://apps
+```
+
 
 ## Firefox
 https://stackoverflow.com/questions/11704828/how-to-allow-keyboard-focus-of-links-in-firefox
