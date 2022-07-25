@@ -4,8 +4,37 @@ Optionally, for live-reload speed:
 Set up a persona without plugins. `ReactDevTools` is
 rarely needed, so it's better to enable it when needed.
   
+## Webpack caches
 There's no need to disable caches in the Network Panel.
-It's ok because resources are hash-named, even in dev.
+It's ok because our resources are hash-named, even in dev using the following:
+```js
+const Chunks = ['node_modules', 'card', 'entry']
+const ChunkSuffix = '-chunk.js'
+
+webpackConfig.setupMiddlewares = (middlewares, { app }) {
+    app.use(`/*${ChunkSuffix}`, (_, response, next) => {
+        response.setHeader('Cache-Control', 'max-age=31536000')
+        next()
+    })
+    return middlewares
+}
+    
+webpackConfig.optimization: {
+    runtimeChunk: true,
+    splitChunks: {
+        filename: `[name]-[chunkhash]${ChunkSuffix}`,
+        cacheGroups: Chunks.reduce((acc, dir) => {
+            acc[dir] = {
+                test: RegExp(dir),
+                name: dir,
+                chunks: 'initial',
+                enforce: true
+            }
+            return acc
+        }, {})
+    }
+}
+```
 
 
 ## Filtering the Console
