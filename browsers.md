@@ -1,9 +1,12 @@
 # Chrome
-Optionally, for live-reload speed:
 
+## Fullscreen in macOS 
+Ctrl + Cmd + F
+
+## For live-reload speed:
 Set up a persona without plugins. `ReactDevTools` is
 rarely needed, so it's better to enable it when needed.
-  
+
 ## Webpack caches
 There's no need to disable caches in the Network Panel.
 It's ok because our resources are hash-named, even in dev using the following:
