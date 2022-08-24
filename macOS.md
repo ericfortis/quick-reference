@@ -20,6 +20,11 @@ killall SystemUIServer
 brew leaves
 ```
 
+## Open man pages as PDF in Previewer
+```sh
+manu() { man -t "$@" | open -f -a Preview; }
+```
+
 ## Trust Self-Signed cert
 - Open Keychain Access
 - Select login keychains
