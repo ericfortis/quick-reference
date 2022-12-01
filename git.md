@@ -113,7 +113,7 @@ https://stackoverflow.com/a/40465455
 cat << EOF > .git/hooks/pre-commit
 #!/bin/sh
 
-branch=`git rev-parse --abbrev-ref HEAD`
+branch=`git branch --show-current`
 if [ \$branch = "main" ]; then
   echo "Unauthorized: You can't commit directly to the $branch branch"
   exit 1
