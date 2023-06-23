@@ -37,6 +37,12 @@ for file in *.mkv; do
 done
 ```
 
+### to HVEC x265
+```shell script
+for file in *.mp4; do
+  ffmpeg -i "$file" -c:v libx265 -vtag hvc1 "${file%.mkv}.x265.mp4"
+done
+```
 
 ### mp3 from mp4
 ```shell script
