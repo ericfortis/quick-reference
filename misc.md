@@ -1,9 +1,14 @@
 # Tips
 
+## [TLS Certificates Info](https://serverfault.com/a/881415)
+```shell
+nmap -p 443 --script ssl-cert uidrafter.com
+```
+
 ## Benchmarking
 ```shell script
 sudo apt install apache2-utils
-ab -c 100 -n 5000 -r https://my.uidrafter.com/login
+ab -c 100 -n 5000 -r https://example.com
 ```
 
 ## Lorem Ipsum IPs
