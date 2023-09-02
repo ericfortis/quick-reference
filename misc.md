@@ -45,5 +45,18 @@ be different, otherwise it would fail trying to reuse the target (localhost:7777
 socat TCP4-LISTEN:8888,fork,reuseaddr TCP4:127.0.0.1:7777
 ```
 
+## nc
+Transfer files with netcat on macOS
+
+Server
+```shell
+nc -l 5555 > myfile
+```
+
+Client
+```shell
+cat myfile | nc 192.0.2.55 5555
+```
+
 
 
