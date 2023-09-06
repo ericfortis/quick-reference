@@ -50,12 +50,12 @@ Transfer files with netcat on macOS
 
 Server
 ```shell
-nc -l 5555 > myfile
+cat thefile | nc -l 5555
 ```
 
 Client
 ```shell
-cat myfile | nc 192.0.2.55 5555
+nc 192.0.2.55 5555 > thefile
 ```
 
 
