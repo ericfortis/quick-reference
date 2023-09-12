@@ -9,6 +9,12 @@ https://github.com/uxtely/ops-utils/tree/main/screencast
 -an
 ```
 
+### Fix for HEVC not importable in Final Cut Pro or no video thumbnails in macOS
+https://discussions.apple.com/thread/253596557
+```shell
+ffmpeg -i input.mp4 -c copy -tag:v hvc1 output.mp4
+```
+
 ### Interpolate slow motion
 First see the original fps `ffmpeg -i file.mp4`
 ```shell script
