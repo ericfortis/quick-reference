@@ -3,7 +3,13 @@
 ## Opening Projects
 WebStorm works better when the projects are opened
 individually. Using the repo root is slower: renames,
-auto-complete, etc; and import paths don't resolve perfectly.
+auto-complete, etc.; and import paths don't resolve perfectly.
+
+## Updating Node.js Core (External Libraries)
+Languages & Frameworks &rarr; Node.js
+
+Cycle the "Coding Assistance for Node.js" checkbox
+
 
 ## Live Static Analysis
 - _Preferences  → Language & Frameworks  → JS  → Code Quality Tools_
