@@ -53,8 +53,6 @@ epairs are fixed at startup and for some reason they're getting deleted in FreeB
 Workaround: `shutdown -r now` on the host, or try `service netif restart`
 
 
-
-
 ## Firewall
 - `pfctl -sa` show everything it can show (rules, state)
 - `/etc/pf.conf` Main conf. Handles the jails' NAT.
@@ -77,6 +75,20 @@ Workaround: `shutdown -r now` on the host, or try `service netif restart`
   - `zpool status`
   - https://www.freebsd.org/doc/handbook/zfs-zpool.html
 
+
+## pkg and ports in conjunction
+The Ports Collection and pkg are must be on the same branch release of the ports tree.
+First, check the pkg url (Quarterly or Latest):
+```shell
+cat /usr/local/etc/pkg/repos/FreeBSD.conf 
+cat           /etc/pkg/FreeBSD.conf
+```
+
+Install the Ports Collection
+```shell
+pkg install git
+git clone https://git.FreeBSD.org/ports.git -b 2023Q3 --depth=1 /usr/ports
+```
 
 # Fixing FreeBSD
 ## Read-Write mount in Single-User mode
