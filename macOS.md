@@ -22,7 +22,11 @@ brew leaves
 
 ## Open man pages as PDF in Previewer
 ```sh
-manu() { man -t "$@" | open -f -a Preview; }
+manu() {
+  man -t "$@" > $TMPDIR/"$@".ps
+  pstopdf $TMPDIR/"$@".ps
+  open -a Preview $TMPDIR/"$@".pdf
+}
 ```
 
 ## Trust Self-Signed cert
