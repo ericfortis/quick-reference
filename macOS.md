@@ -40,7 +40,7 @@ page) when it only has viewBox (it shouldn't have width and height)
 ## Cmd+Ctrl+Click Drag Window
 https://mmazzarolo.com/blog/2022-04-16-drag-window-by-clicking-anywhere-on-macos/
 
-Enable
+Enable (logout is required afterward)
 ```shell
 defaults write -g NSWindowShouldDragOnGesture -bool true   
 ```
