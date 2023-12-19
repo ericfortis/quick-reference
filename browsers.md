@@ -85,6 +85,11 @@ Handy if it's stuck in the one bound to WebStorm's Debug.
 - `google-chrome -na` (Ubuntu)
 - `open -n https://example.com` (macOS)
 
+#### Override System Proxy Settings
+```shell
+alias chrome='open -a "Google Chrome" --args --proxy-server='
+```
+
 
 
 ## Safari
