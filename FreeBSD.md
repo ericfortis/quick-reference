@@ -80,14 +80,15 @@ Workaround: `shutdown -r now` on the host, or try `service netif restart`
 The Ports Collection and pkg are must be on the same branch release of the ports tree.
 First, check the pkg url (Quarterly or Latest):
 ```shell
-cat /usr/local/etc/pkg/repos/FreeBSD.conf 
-cat           /etc/pkg/FreeBSD.conf
+cat /etc/pkg/FreeBSD.conf | grep url
 ```
+or `cat /usr/local/etc/pkg/repos/FreeBSD.conf`
 
 Install the Ports Collection
 ```shell
 pkg install git
-git clone https://git.FreeBSD.org/ports.git -b 2023Q3 --depth=1 /usr/ports
+BRANCH=2024Q1
+git clone https://git.FreeBSD.org/ports.git -b $BRANCH --depth=1 /usr/ports
 ```
 
 # Fixing FreeBSD

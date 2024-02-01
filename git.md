@@ -44,6 +44,7 @@ git bisect reset
 
 ## Rename all ".js" -> ".mjs" (recursively)
 ```shell
+IFS=
 for i in $(find . -iname "*.js"); do
   git mv "$i" "$(echo $i | rev | cut -d '.' -f 2- | rev).mjs";
 done;
