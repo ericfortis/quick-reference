@@ -202,5 +202,14 @@ reboot
 freebsd-update install
 ```
 
+### Need reboot?
+```shell
+if [ `freebsd-version -k` == `uname -r` ]; then 
+  echo "No reboot needed"
+else 
+  echo "Please reboot"
+fi
+```
+
 We no longer compile packages. We compiled mainly to use
-`libressl`. But it was to complex and time-consuming.
+`libressl`. But it was too complex and time-consuming.
